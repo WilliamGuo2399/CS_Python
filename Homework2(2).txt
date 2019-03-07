@@ -1,0 +1,82 @@
+#William Guo
+#1136206
+#Program Set 2(5 points)
+#The user inputs multiple information about stocks, and the program displays that amount of stocks
+
+#User inputs
+name=input("Enter Stock name: ")
+shares=int(input("Enter Number of shares:"))
+purchase_price=float(input("Enter Purchase price:"))
+selling_price=float(input("Enter selling price:"))
+com=float(input("Enter Commission: "))
+quit=input("Press * to quit: (If not, just press enter) ")
+print('\n')
+
+#While loop
+while quit!='*':
+    amount_paid=shares*purchase_price
+    com1=amount_paid*com
+    amount_sold=shares*selling_price 
+    com2=float(amount_sold*com)
+    profit_loss=((amount_sold)-(amount_sold*com))-((amount_paid)+(amount_paid*com))
+    print("Stock Name:", name) #Outputs
+    print('\n')
+    print("Amount paid for the stock:       $", format(amount_paid,'10,.2f'))
+    print("Commission paid on the purchase: $", format(com1,'10,.2f'))
+    print("Amount the stock sold for:       $", format(amount_sold,'10,.2f'))
+    print("Commission paid on the sale:     $", format(com2,'10,.2f'))
+    print("Profit(or loss if negative):     $", format(profit_loss,'10,.2f'))
+    print('\n')
+    name=input("Enter Stock name: ") #User inputs
+    shares=int(input("Enter Number of shares: "))
+    purchase_price=float(input("Enter Purchase price: "))
+    selling_price=float(input("Enter selling price: "))
+    com=float(input("Enter Commission: "))
+    quit=input("Press * to quit: (If not, just press enter) ")
+    print('\n')
+
+
+
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+##========= RESTART: C:/Users/William DELL/Documents/Homework 2 (2).py =========
+##Enter Stock name: Kaplack
+##Enter Number of shares:4
+##Enter Purchase price:20
+##Enter selling price:24
+##Enter Commission: 0.01
+##Press * to quit: (If not, just press enter) 
+##
+##
+##Stock Name: Kaplack
+##
+##
+##Amount paid for the stock:       $      80.00
+##Commission paid on the purchase: $       0.80
+##Amount the stock sold for:       $      96.00
+##Commission paid on the sale:     $       0.96
+##Profit(or loss if negative):     $      14.24
+##
+##
+##Enter Stock name: Apple
+##Enter Number of shares: 1
+##Enter Purchase price: 100
+##Enter selling price: 150
+##Enter Commission: 0.01
+##Press * to quit: (If not, just press enter) 
+##
+##
+##Stock Name: Apple
+##
+##
+##Amount paid for the stock:       $     100.00
+##Commission paid on the purchase: $       1.00
+##Amount the stock sold for:       $     150.00
+##Commission paid on the sale:     $       1.50
+##Profit(or loss if negative):     $      47.50
+##
+##
+##Enter Stock name:
+

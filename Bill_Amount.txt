@@ -1,0 +1,39 @@
+#William Guo
+#1136206
+#Program Set 4 (10 points)
+#This program will calculate the bill amount for an item given the user inputs
+
+
+#User inputs
+quantity=int(input("Enter the quantity of item sold: "))
+value=int(input("Enter the value of item: "))
+discount_p=int(input("Enter the discount percentage: "))
+tax=int(input("Enter the tax: "))
+print("\n")
+
+
+#Calculations
+amount=int(quantity*value)
+discount_a=int(amount*(discount_p/100))
+subtotal=int(amount-discount_a)
+tax_a=int(subtotal*tax/100)
+total_a=int(subtotal+tax_a)
+
+
+#Outputs
+print("*********BILL*********")
+print("Quantity sold:           ", format(quantity,'8,.2f'))
+print("Price per item:          ", format(value,'8,.2f'))
+print("\n")
+print("                        ----------")
+print("Amount:                  ", format(amount,'8,.2f'))
+print("Discount:                - ", format(discount_a,',.2f'))
+print("                        ----------")
+print("Discounted Total:        ", format(subtotal,'8,.2f'))
+print("Tax:                   + ", format(tax_a,'8,.2f'))
+print("                        ----------")
+print("Total amount to be paid $", format(total_a,'8,.2f'))
+
+
+
+

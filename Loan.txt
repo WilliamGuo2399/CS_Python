@@ -1,0 +1,32 @@
+#William Guo
+#1136206
+#Program Set 2 (10 points)
+#This program will compute the loan amount, it's monthly payment and total payment.
+
+
+#Input data from user
+annual_r=float(input("Enter annual interest rate:"))
+years=float(input("Enter number of years as an integer:"))
+loan_am=float(input("Enter loan amount:"))
+
+
+#Caluclations
+monthly_r=annual_r/12
+monthlyPayment=loan_am*monthly_r/(1-1/(1+monthly_r)**(years*12))
+totalPayment=monthlyPayment*years*12
+
+        
+#Outputs
+print("The monthly payment is", format(monthlyPayment,'.2f'))
+print("The total payment is", format(totalPayment,'.2f'))
+
+
+
+
+##=========== RESTART: C:\Users\William DELL\Documents\Program 2.py ===========
+##Enter annual interest rate:7.25
+##Enter number of years as an integer:5
+##Enter loan amount:120000.95
+##The monthly payment is 72500.57
+##The total payment is 4350034.44
+##>>>

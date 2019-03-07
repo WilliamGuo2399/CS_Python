@@ -1,0 +1,243 @@
+#William Guo
+#1136206
+#Lab 3 Functions and Strings
+
+#1a
+def texas():
+    birds=5000
+    print("Texas has", birds, "birds")
+
+if __name__=="__main__":
+    texas()
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/122345.py 
+##Texas has 5000 birds
+##>>>
+    
+#1b
+def California():
+    birds=8000
+    print("California has", birds, "birds")
+
+if __name__=="__main__":
+    California()
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/122345.py 
+##California has 8000 birds
+##>>> 
+    
+#1c
+def texas():
+    birds=5000
+    print("Texas has", birds, "birds")
+
+def California():
+    birds=8000
+    print("California has", birds, "birds")
+
+def main():
+    texas()
+    California()
+
+if __name__=="__main__":
+    main()
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/122345.py 
+##Texas has 5000 birds
+##California has 8000 birds
+##>>>
+
+#2a
+principal=float(input("Enter a principal: "))
+rate=float(input("Enter a rate: "))
+periods=int(input("Enter a period: "))
+def show_interest():
+    interest=principal*rate*periods
+    print("The simple interest will be $", format(interest, ',.2f'))
+if __name__=="__main__":
+    show_interest()
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/122345.py 
+##Enter a principal: 10000.00
+##Enter a rate: 0.01
+##Enter a period: 10
+##The simple interest will be $ 1,000.00
+##>>>
+
+#2b
+rate=0.01
+periods=10
+principal=10000.00
+def show_interest():
+    interest=principal*rate*periods
+    return interest
+def main():
+    interest=show_interest()
+    print("The simple interest will be $", format(interest, ',.2f'))  
+if __name__=="__main__":
+    main()
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/122345.py 
+##The simple interest will be $ 1,000.00
+##>>> 
+
+#3a
+def getData():
+    length=int(input("Enter a length: "))
+    height=int(input("Enter a height: "))
+    return length, height
+
+#3b
+def trigArea(length:int, height:int):
+    area=(length*height)/2
+    return area
+
+#3c
+def displayData(length:int, height:int, area:int):
+    print("The length is", length)
+    print("The height is", height)
+    print("The area is", area)
+
+#3d
+def getData():
+    length=int(input("Enter a length: "))
+    height=int(input("Enter a height: "))
+    return length, height
+
+def trigArea(length:int, height:int):
+    area=(length*height)/2
+    return area
+
+def displayData(length:int, height:int, area:int):
+    print("The length is", length)
+    print("The height is", height)
+    print("The area is", area)
+
+def main():
+    (length, height)=getData()
+    (area)=trigArea(length, height)
+    displayData(length, height, area)
+
+if __name__=="__main__":
+    main()
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/122345.py 
+##Enter a length: 2
+##Enter a height: 2
+##The length is 2
+##The height is 2
+##The area is 2.0
+##>>> 
+
+#4
+def get_sales():
+    sales=float(input("Enter the monthly sales: "))
+    return sales
+def get_advanced_pay():
+    print("Enter the amount of advanced pay, or enter 0 if no advanced pay was given.")
+    advanced_pay=float(input("Advanced pay: "))
+    return advanced_pay
+def determine_comm_rate(sales):
+    if sales<10000:
+        comm_rate=.10
+    elif 10000<=sales<15000:
+        comm_rate=.12
+    elif 15000<=sales<=17999:
+        comm_rate=.14
+    elif 18000<=sales<=21999:
+        comm_rate=.16
+    elif sales>21999:
+        comm_rate=.18
+    return comm_rate
+def main():
+ # Get the amount of sales from user
+    sales = get_sales()
+ # Get the amount of advanced pay from user.
+    advanced_pay = get_advanced_pay()
+ # Determine the commission rate.
+    comm_rate = determine_comm_rate(sales)
+ # Calculate the pay.
+    pay = (sales * comm_rate) - advanced_pay
+ # Display the amount of pay.
+    print('The pay is $', format(pay, ',.2f'), sep='')
+ # Determine whether the pay is negative.
+    if pay < 0:
+        print('The salesperson must reimburse')
+        print('the company.')
+
+if __name__=="__main__":
+    main()
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/1.py 
+##Enter the monthly sales: 9500
+##Enter the amount of advanced pay, or enter 0 if no advanced pay was given.
+##Advanced pay: 0
+##The pay is $950.00
+##>>>
+
+#5
+def getInitials():
+    name=input("Enter your full name: ")
+    initials=''
+    for ch in name:
+        if ch.isupper():
+            initials+=ch
+            initials=str(initials)+'.'
+    print(initials)
+if __name__=="__main__":
+    getInitials()
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/1.py 
+##Enter your full name: James Tiberias Kirk
+##J.T.K.
+##>>>
+
+#6        
+def main():
+    # Get a string of numbers as input from the user.
+    number_string = input('Enter a sequence of digits with nothing separating them: ')
+    # Call string_total method, and store the total.
+    total = string_total(number_string)
+    # Display the total.
+    print('The total of the digits in the string you entered is', total)
+
+def string_total(number_string:int):
+    result=0
+    for num in number_string:
+        result+=int(num)
+    return result
+
+if __name__=="__main__":
+    main()
+    
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/1.py 
+##Enter a sequence of digits with nothing separating them: 4563
+##The total of the digits in the string you entered is 18
+##>>> 

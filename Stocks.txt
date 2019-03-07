@@ -1,0 +1,52 @@
+#William Guo
+#1136206
+#Program Set 3 (10 points)
+#This program will show various information about the user's own inputed stocks
+
+
+#User Inputs
+name=input("Enter Stock name: ")
+shares=int(input("Enter Number of shares: "))
+purchase_price=float(input("Enter Purchase price: "))
+selling_price=float(input("Enter selling price: "))
+com=float(input("Enter Commission: "))
+print('\n')
+
+
+#Calculations
+amount_paid=shares*purchase_price
+com1=amount_paid*com
+amount_sold=shares*selling_price
+com2=float(amount_sold*com)
+profit_loss=((amount_sold)-(amount_sold*com))-((amount_paid)+(amount_paid*com))
+
+
+#Outputs
+print("Stock Name:", name)
+print('\n')
+print("Amount paid for the stock:       $", format(amount_paid,'10,.2f'))
+print("Commission paid on the purchase: $", format(com1,'10,.2f'))
+print("Amount the stock sold for:       $", format(amount_sold,'10,.2f'))
+print("Commission paid on the sale:     $", format(com2,'10,.2f'))
+print("Profit(or loss if negative):     $", format(profit_loss,'10,.2f'))
+
+
+
+
+##=========== RESTART: C:/Users/William DELL/Documents/Program 3.py ===========
+##Enter Stock name: Kaplack,Inc.
+##Enter Number of shares: 10000
+##Enter Purchase price: 33.92
+##Enter selling price: 35.92
+##Enter Commission: 0.04
+##
+##
+##Stock Name: Kaplack,Inc.
+##
+##
+##Amount paid for the stock:       $ 339,200.00
+##Commission paid on the purchase: $  13,568.00
+##Amount the stock sold for:       $ 359,200.00
+##Commission paid on the sale:     $  14,368.00
+##Profit(or loss if negative):     $  -7,936.00
+##>>> 

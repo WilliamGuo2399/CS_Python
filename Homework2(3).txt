@@ -1,0 +1,97 @@
+#William Guo
+#1136206
+#Program Set 3(5 points)
+# The user inputs inputs information about stocks, and the program uses for loops to display or output that amount of stocks
+num=int(input("How many stocks do you have? "))
+print('\n')
+for stock in range(num):
+    shares=int(input("Enter Number of shares:"))
+    purchase_price=float(input("Enter Purchase price:"))
+    selling_price=float(input("Enter selling price:"))
+    com=float(input("Enter Commission: ")) 
+    amount_paid=shares*purchase_price
+    com1=amount_paid*com
+    amount_sold=shares*selling_price 
+    com2=float(amount_sold*com)
+    profit_loss=((amount_sold)-(amount_sold*com))-((amount_paid)+(amount_paid*com))
+    print('\n')
+    print("Stock", stock+1)
+    print('_ _ _ _ _ _ _ _ _')
+    print("Amount paid for the stock:       $", format(amount_paid,'10,.2f'))
+    print("Commission paid on the purchase: $", format(com1,'10,.2f'))
+    print("Amount the stock sold for:       $", format(amount_sold,'10,.2f'))
+    print("Commission paid on the sale:     $", format(com2,'10,.2f'))
+    print("Profit(or loss if negative):     $", format(profit_loss,'10,.2f'))
+    print('\n')
+    
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+##========= RESTART: C:/Users/William DELL/Documents/Homework 2 (3).py =========
+##How many stocks do you have? 4
+##
+##
+##Enter Number of shares:5
+##Enter Purchase price:140
+##Enter selling price:120
+##Enter Commission: 0.01
+##
+##
+##Stock 1
+##_ _ _ _ _ _ _ _ _
+##Amount paid for the stock:       $     700.00
+##Commission paid on the purchase: $       7.00
+##Amount the stock sold for:       $     600.00
+##Commission paid on the sale:     $       6.00
+##Profit(or loss if negative):     $    -113.00
+##
+##
+##Enter Number of shares:2
+##Enter Purchase price:20
+##Enter selling price:30
+##Enter Commission: 0.01
+##
+##
+##Stock 2
+##_ _ _ _ _ _ _ _ _
+##Amount paid for the stock:       $      40.00
+##Commission paid on the purchase: $       0.40
+##Amount the stock sold for:       $      60.00
+##Commission paid on the sale:     $       0.60
+##Profit(or loss if negative):     $      19.00
+##
+##
+##Enter Number of shares:10
+##Enter Purchase price:40
+##Enter selling price:49
+##Enter Commission: 0.01
+##
+##
+##Stock 3
+##_ _ _ _ _ _ _ _ _
+##Amount paid for the stock:       $     400.00
+##Commission paid on the purchase: $       4.00
+##Amount the stock sold for:       $     490.00
+##Commission paid on the sale:     $       4.90
+##Profit(or loss if negative):     $      81.10
+##
+##
+##Enter Number of shares:20
+##Enter Purchase price:87
+##Enter selling price:79
+##Enter Commission: 0.01
+##
+##
+##Stock 4
+##_ _ _ _ _ _ _ _ _
+##Amount paid for the stock:       $   1,740.00
+##Commission paid on the purchase: $      17.40
+##Amount the stock sold for:       $   1,580.00
+##Commission paid on the sale:     $      15.80
+##Profit(or loss if negative):     $    -193.20
+##
+##
+##>>> 
+    
+    

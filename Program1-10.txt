@@ -1,0 +1,273 @@
+#William Guo
+#1136206
+#Program 1 - This program sees if you're eligible to vote based on your age
+
+age=int(input("Enter the age: "))
+if age<18:
+    sum=18-age
+    print("You have to wait for another", sum, "years to cast your vote")
+else:
+    print("You are eligible to vote!")
+
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:\Users\William DELL\AppData\Local\Programs\Python\Python37-32\Lab 2 (1).py 
+##Enter the age: 10
+##You have to wait for another 8 years to cast your vote
+##>>> 
+
+
+
+
+#William Guo
+#1136206
+#Program 2 - This program sees if the user's number is either even or odd
+
+num=int(input("Enter any number: "))
+if num%2==0:
+    print(num, "is even")
+else:
+    print(num, "is odd")
+
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2 (2).py 
+##Enter any number: 125
+##125 is odd
+##>>>
+
+
+
+
+#William Guo
+#1136206
+#Program 3 - This program sees if the user's character is a vowel or not
+
+char=input("Enter any character: ")
+if char=='a' or char=='e' or char=='i' or char=='o' or char=='u':
+    print(char, "is a vowel")
+else:
+    print(char, "is not a vowel")
+
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2 (3).py 
+##Enter any character: h
+##h is not a vowel
+##>>> 
+
+
+
+
+#William Guo
+#1136206
+#Program 4 - The program will check if the user's character is either a uppercase letter,a lowercase letter, or a number
+
+char=input("Enter any character: ")
+if char>='A' and char<='Z':
+    print("Uppercase character was entered")
+elif char>='a' and char<='z':
+    print("Lowercase character was entered")
+else:
+    print("A number was entered")
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2 (4).py 
+##Enter any character: C
+##Uppercase character was entered
+##>>> 
+
+
+
+
+#William Guo
+#1136206
+#Program 5 - The user will enter a number and the program will print that amount of stars
+
+num=int(input("How many stars do you want? "))
+brave=True
+while brave:
+    stars=num*'*'
+    print(stars, end='')
+    brave=False
+    
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2 (5).py 
+##How many stars do you want? 20
+##********************
+##>>> 
+
+
+
+
+#William Guo
+#1136206
+#Program 6 - This program calculates the property tax
+
+print("Enter the property lot number or enter -999 to end")
+lot_num=int(input("Enter the lot number: "))
+if lot_num==-999:
+    print()
+else:
+    property=float(input("Enter property value: "))
+while lot_num!=-999:
+    property_tax=property*0.0065
+    print("Property tax: $", format(property_tax, '.2f'))
+    print('\n')
+    print("Enter the property lot number or enter -999 to end")
+    lot_num=int(input("Enter the lot number: "))
+    if lot_num==-999:
+        print()
+    else:
+        property=float(input("Enter property value: "))
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2 (6).py 
+##Enter the property lot number or enter -999 to end
+##Enter the lot number: 100
+##Enter property value: 100000.00
+##Property tax: $ 650.00
+##
+##
+##Enter the property lot number or enter -999 to end
+##Enter the lot number: 200
+##Enter property value: 5000.00
+##Property tax: $ 32.50
+##
+##
+##Enter the property lot number or enter -999 to end
+##Enter the lot number: -999
+##
+##>>> 
+
+
+
+
+#William Guo
+#1136206
+#Program 7 - The user input wholesale prices and the program calculate retail prices
+
+cost=float(input("Enter the item's wholesale cost: "))
+if cost<-0:
+    print("ERROR: the cost cannot be negative")
+    cost=float(input("Enter the correct wholesale cost: "))
+retail=(cost*0.025)+cost
+print("Retail price is $", retail)
+check=input("Do you have another item? (Enter y for yes): ")
+while check!='n':
+    cost=float(input("Enter the item's wholesale cost: "))
+    if cost<-0:
+        print("ERROR: the cost cannot be negative")
+        cost=float(input("Enter the correct wholesale cost: "))
+    retail=(cost*0.025)+cost
+    print("Retail price is $", retail)
+    check=input("Do you have another item? (Enter y for yes): ")
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2(7).py 
+##Enter the item's wholesale cost: -.50
+##ERROR: the cost cannot be negative
+##Enter the correct wholesale cost: .50
+##Retail price is $ 0.5125
+##Do you have another item? (Enter y for yes): n
+##>>> 
+
+
+
+
+#William Guo
+#1136206
+#Program 8 - This program will print "Barzinger" a set amount of times
+
+num=int(input("Enter a number: "))
+for row in range(num):
+    print("Barzinger")
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2 (8).py 
+##Enter a number: 5
+##Barzinger
+##Barzinger
+##Barzinger
+##Barzinger
+##Barzinger
+##>>> 
+
+
+
+
+#William Guo
+#1136206
+#Program 9 - This program will calculate the sum of integers
+
+amount=int(input("How many numbers do you want to add? "))
+total=0.0
+for row in range(amount):
+    print('Enter number', row+1,end='')
+    num=int(input(': '))
+    total=total+num
+print("The total is", total)
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2(9).py 
+##How many numbers do you want to add? 3
+##Enter number 1: 25
+##Enter number 2: 34
+##Enter number 3: 33
+##The total is 92.0
+##>>> 
+
+
+
+
+#William Guo
+#1136206
+#Program 10 - This program will convert speed from kph to mph
+
+start_speed=int(input("What is the start speed in kph? "))
+end_speed=int(input("What is the end speed in kph? "))
+print('\n')
+print("KPH      MPH")
+print("_________________________________________")
+for i in range(start_speed, end_speed+10, 10):
+    MPH=float(i*0.6214)
+    print(i,'\t',format(MPH, ',.1f'))
+
+##Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+##Type "copyright", "credits" or "license()" for more information.
+##>>> 
+## RESTART: C:/Users/William DELL/AppData/Local/Programs/Python/Python37-32/Lab 2(10).py 
+##What is the start speed in kph? 60
+##What is the end speed in kph? 130
+##
+##
+##KPH      MPH
+##_________________________________________
+##60 	 37.3
+##70 	 43.5
+##80 	 49.7
+##90 	 55.9
+##100 	 62.1
+##110 	 68.4
+##120 	 74.6
+##130 	 80.8
+##>>> 
+	

@@ -1,0 +1,40 @@
+#William Guo
+#1136206
+#Program Set 1(10 points)
+#This program will ask the user an amount of cookies and then display the number of cups of each ingredient needed.
+
+
+#Intial recipe
+cookies_r=int(48)
+sugar_r=float(1.5)
+butter_r=int(1)
+flour_r=float(2.75)
+
+
+#Input
+cookies=float(input("Enter number of cookies: "))
+
+
+#Calculations
+sugar=cookies*sugar_r/cookies_r
+butter=cookies*butter_r/cookies_r
+flour=cookies*flour_r/cookies_r
+
+#Outputs
+print("To make", cookies, "cookies, you will need:")
+print(format(sugar,'.2f'), "cups of sugar")
+print(format(butter,'.2f'), "cups of butter")
+print(format(flour,'.2f'), "cups of flour")
+
+
+
+
+##=========== RESTART: C:\Users\William DELL\Documents\Program 1.py ===========
+##Enter number of cookies: 56
+##To make 56.0 cookies, you will need:
+##1.75 cups of sugar
+##1.17 cups of butter
+##3.21 cups of flour
+##>>> 
+
+      
